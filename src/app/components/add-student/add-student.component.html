@@ -1,0 +1,121 @@
+<h2> Add New Student</h2>
+
+<form [formGroup]="addStudentForm" (ngSubmit)="addStudentFun(addStudentForm)" autocomplete="off">
+
+    <div class="row">
+        <div class="col-6 mx-auto mt-4">
+            <!-- First Name -->
+            <input type="text" class="form-control" placeholder="First name" id="firstname" name="firstname"
+                formControlName="firstname" aria-label="First name">
+            <div
+                *ngIf="addStudentForm.controls['firstname'].invalid && (addStudentForm.controls['firstname'].dirty || addStudentForm.controls['firstname'].touched)">
+                <div class="error">
+                    Please enter first name
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 mx-auto mt-4">
+            <!-- Last Name -->
+            <input type="text" class="form-control" placeholder="Last name" id="lastname" name="lastname"
+                formControlName="lastname" aria-label="Last name">
+            <div
+                *ngIf="addStudentForm.controls['lastname'].invalid && (addStudentForm.controls['lastname'].dirty || addStudentForm.controls['lastname'].touched)">
+                <div class="error">
+                    Please enter last name
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-6 mx-auto mt-4">
+            <input type="email" class="form-control" placeholder="Email" id="email" name="email" formControlName="email"
+                aria-label="Email">
+            <div
+                *ngIf="addStudentForm.controls['email'].invalid && (addStudentForm.controls['email'].dirty || addStudentForm.controls['email'].touched)">
+                <div class="error">
+                    Please enter Email
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 mx-auto mt-4">
+            <div class="btn-group" role="group" aria-label="gender">
+                <input type="radio" class="btn-check" name="male" id="male" autocomplete="off">
+                <label class="btn btn-outline-primary" for="male">Male</label>
+
+                <input type="radio" class="btn-check" name="female" id="female" autocomplete="off">
+                <label class="btn btn-outline-primary" for="female">Female</label>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-6 mx-auto mt-4">
+            <input type="number" class="form-control" placeholder="phone" id="phone" name="phone"
+                formControlName="phone" aria-label="phone">
+            <div
+                *ngIf="addStudentForm.controls['phone'].invalid && (addStudentForm.controls['phone'].dirty || addStudentForm.controls['phone'].touched)">
+                <div class="error">
+                    Please enter Phone
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <ng-container formGroupName="address">
+        <div class="row">
+            <div class="col-6 mx-auto mt-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="city" placeholder="City" formControlName="city">
+                    <div
+                        *ngIf="addStudentForm.controls['city'].invalid && (addStudentForm.controls['city'].dirty || addStudentForm.controls['city'].touched)">
+                        <div class="error">
+                            Please enter city
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 mx-auto mt-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="street" placeholder="street" formControlName="street">
+                    <div
+                        *ngIf="addStudentForm.controls['street'].invalid && (addStudentForm.controls['street'].dirty || addStudentForm.controls['street'].touched)">
+                        <div class="error">
+                            Please enter street
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 mx-auto mt-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="pincode" placeholder="pincode"
+                        formControlName="pincode">
+                    <div
+                        *ngIf="addStudentForm.controls['pincode'].invalid && (addStudentForm.controls['pincode'].dirty || addStudentForm.controls['pincode'].touched)">
+                        <div class="error">
+                            Please enter pincode
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-6 mx-auto mt-4">
+                <div class="form-group">
+                    <button type="submit"> Submit</button>
+                </div>
+            </div>
+        </div>
+    </ng-container> -->
+</form>

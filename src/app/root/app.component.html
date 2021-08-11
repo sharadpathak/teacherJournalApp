@@ -8,52 +8,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Students</a>
-                    <a class="nav-link" href="#">Subjects</a>
-                    <a class="nav-link" href="#">Statistics</a>
-                    <a class="nav-link" href="#">Export</a>
+                    <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active">Students</a>
+                    <a class="nav-link" [routerLink]="['/subjects']" routerLinkActive="router-link-active" href="#">Subjects</a>
+                    <a class="nav-link" [routerLink]="['/statistics']" routerLinkActive="router-link-active"
+                        href="#">Statistics</a>
+                    <a class="nav-link" [routerLink]="['/teacher']" routerLinkActive="router-link-active"
+                        href="#">Export</a>
                 </div>
             </div>
         </div>
     </nav>
     <div class="mt-4">
-        <table class="table table-dark table-striped table-bordered">
-            <thead>
-                <tr>
-                    <th scope="col" class="brand-color">ID</th>
-                    <th scope="col" class="brand-color">First Name</th>
-                    <th scope="col" class="brand-color">Last Name</th>
-                    <th scope="col" class="brand-color">Address</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <router-outlet></router-outlet>
+    </div>    
 </div>
-
-
-
-
-<!-- <a href=""><strong>Students</strong></a>
-<a href=""><strong>Subjects</strong></a>
-<a href=""><strong>Statistics</strong></a>
-<a href=""><strong>Export</strong></a> -->
